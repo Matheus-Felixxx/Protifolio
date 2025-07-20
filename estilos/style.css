@@ -72,7 +72,7 @@ h1 {
 
 #hello {
     transform: translateY(150px);
-    color: var(--text-disabled);
+    color: rgb(10, 99, 7);
 }
 
 header p {
@@ -97,52 +97,30 @@ header img {
 
 
 .img1{
-    width: 300px;
-    height: 300px;
-    animation: Subir 15s linear infinite alternate;
+    height: 1000px;
+    animation: Subir 55s linear infinite alternate;
  
 }
 
-.img2{
-    width: 200px;
-    height: 200px;
-    padding: 10px;
-    animation: Subirc 60s linear infinite alternate;
-}
-
-.img3{
-    width: 200px;
-    height: 200px;
-    padding: 10px;
-    animation: Subir 30s linear infinite alternate;
-}
 
 @keyframes Subir{
     0%{
         transform: translateY(00px);
     }
     100%{
-        transform: translateY(-400px);
+        transform: translateY(-650px);
     }
 }
 
-@keyframes Subirc{
-    0%{
-        transform: translateY(00px);
-    }
-    100%{
-        transform: translateY(-1000px);
-    }
+.cursor{
+    animation: cursor .2s linear alternate infinite;
 }
 
-@keyframes Subir{
+@keyframes cursor {
     0%{
-        transform: translateY(00px);
-    }
-    50%{
-        transform: translateY(-200px);
+        opacity: 0;
     }
     100%{
-        transform: translateY(-400px);
+        opacity: 1;
     }
 }
