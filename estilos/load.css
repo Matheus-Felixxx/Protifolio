@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+:root{
+ 
+ /* === Cores de fundo === */
+      /* Fundo principal */
+  --bg-primary: #161c27;      
+  --bg-secondary: #2E3B55;   
+
+  /* === Cores de texto === */
+  --text-primary: #F5F7FA;    /* Títulos */
+  --text-regular: #D1D9E6;    /* Texto comum */
+  --text-secondary: #A9B4C2;  /* Texto auxiliar */
+  --text-disabled: #6C7A89;   /* Texto desativado */
+  --text-title: rgb(245, 247, 250);       
+  --text-regular: rgb(209, 217, 230);     
+  --text-secondary: rgb(169, 180, 194);   
+  --text-disabled: rgb(22, 80, 187);    
+
+
+  /* === Cores de ação === */
+  --link: #00C9DB;
+  --link-hover: #66E0EA;
+  --highlight: #FFC857;
+  --error: #FF6B6B;
+  --text-link: rgb(0, 201, 219);         
+  --text-link-hover: rgb(102, 224, 234);  
+  --text-highlight: rgb(255, 200, 87);    
+  --text-error: rgb(255, 107, 107); 
+
+  /* === Sombras e bordas opcionais === */
+  --shadow: rgba(0, 0, 0, 0.25);
+  --border-color: #3A475E;
+
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    background-color: var(--bg-primary);
+}
+
+h1{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-error);
+    text-shadow: 5px 5px 10px  #FF6B6B;
+}
+
+.global{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 100px;
+}
+
+div{
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid var(--error);
+    border-top: 10px solid transparent;
+    border-radius: 50%;
+    animation: load 1s ease infinite;
+    box-shadow: 1px 1px 10px 1px var(--text-error);
+}
+
+@keyframes load {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
