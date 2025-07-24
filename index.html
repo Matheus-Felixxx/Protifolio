@@ -6,30 +6,45 @@
     <title>Matheus Felix</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
-<body>
+<body class="slide-up-hidden">
     <header>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings-icon lucide-settings"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-aperture-icon lucide-aperture"><circle cx="12" cy="12" r="10"/><path d="m14.31 8 5.74 9.94"/><path d="M9.69 8h11.48"/><path d="m7.38 12 5.74-9.94"/><path d="M9.69 16 3.95 6.06"/><path d="M14.31 16H2.83"/><path d="m16.62 12-5.74 9.94"/></svg>
         <div class="menu">
-            <a href="#">Sobre</a>
-            <a href="#">Habilidades</a>
-            <a href="#">Projetos</a>
+             
+                <a href="#" class="pri linha">Sobre</a>
+                <a href="#" class="pri2 linha">Habilidades</a>
+                <a href="#" class="pri3 linha">Projetos</a>
+            <a href="#" class="btn" id="cnt">Contato</a>
         </div>
-        <a href="#" id="cnt">Contato</a>
+        
     </header>
     <main>
-        <aside>
+        <aside class="ini slide-up">
             <h1>Matheus Felix</h1>
-            <h2>Desenvolvedor Front-End</h2>
-            <p>Seja Muito Bem-Vindo(a)</p>
+            <h2 >Desenvolvedor Front-End</h2>
+            <p >Seja Muito Bem-Vindo(a)</p>
         </aside>
-        <aside class="sobre">
-            <h2>Sobre</h2>
-            <p>Sou um desenvolvedor front-end com foco na criação de interfaces modernas, responsivas e que proporcionem uma experiência satisfatória ao usuário.</p>
-            <p>Minha trajetória na tecnologia começou aos 10 anos, quando desenvolvia pequenos jogos em plataformas como o Scratch.</p>
-            <p>Posteriormente, por indicação de um colega, iniciei meus estudos em HTML e CSS — momento em que descobri minha paixão pela área.</p>
-            <p>Atualmente, busco constantemente aprimorar minhas habilidades técnicas e criativas, com o objetivo de me tornar, futuramente, um desenvolvedor full stack completo.</p>
+        <aside class="sobre slide-up-hidden">
+  <h2>Sobre</h2>
+  <p class="resumo">
+    Sou um desenvolvedor front-end com foco na criação de interfaces modernas, responsivas e que proporcionem uma experiência satisfatória ao usuário.
+  </p>
+  
+  <div class="blocos">
+    <div class="bloco">
+      <p>Minha trajetória na tecnologia começou aos 10 anos, quando desenvolvia pequenos jogos em plataformas como o Scratch.</p>
+    </div>
+    <div class="bloco">
+      <p>Posteriormente, por indicação de um colega, iniciei meus estudos em HTML e CSS — momento em que descobri minha paixão pela área.</p>
+    </div>
+    <div class="bloco">
+      <p>Atualmente, busco constantemente aprimorar minhas habilidades técnicas e criativas, com o objetivo de me tornar, futuramente, um desenvolvedor full stack completo.</p>
+    </div>
+  </div>
+</aside>
 
-        </aside>
     </main>
+    <script src="script/hover.js"></script>
+    <script src="script/slide.js"></script>
 </body>
 </html>

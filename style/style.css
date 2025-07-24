@@ -1,5 +1,29 @@
 @charset "UTF-8";
 
+:root {
+  /* === Fundo === */
+  --bg-primary: #0f0f0f;           /* Fundo principal */
+  --bg-secondary: #1a1a1a;         /* Elementos de contraste (cards, menus) */
+  
+  /* === Texto === */
+  --text-primary: #e6e6e6;         /* Títulos, destaques */
+  --text-secondary: #b3b3b3;       /* Texto regular */
+  --text-muted: #808080;           /* Texto de apoio/desativado */
+
+  /* === Detalhes e Ações === */
+  --accent: #ffffff;               /* Botões, links, setas animadas */
+  --accent-hover: #cccccc;         /* Hover de elementos interativos */
+
+  /* === Bordas e Linhas === */
+  --border-color: #2a2a2a;
+
+  /* === Destaques (vermelhos refinados) === */
+  --highlight: #cc1122;            /* Vermelho escuro elegante */
+  --highlight-strong: #b3002d;     /* Vermelho vinho profundo */
+}
+
+
+
 *{
     padding: 0px;
     margin: 0px;
@@ -7,23 +31,269 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+body{
+    background-color: var(--bg-primary);
+    overflow-x: hidden;
+}
 
+header{
+    height: 100px;
+    background-color: var(--bg-secondary);
+    position: relative;
+}
 
 .menu{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-a{
+    font-size: 2em;
     position: relative;
-    bottom: 50px;
-    right: 100px;
-    padding: 30px;
-    font-size: 2.2em;
+    bottom: 45px;
+    
 }
 
-svg{
-    width: 50px;
-    height: 50px;
+.menu a{
+    text-decoration: none;
+    padding: 20px;
+    color: var(--text-primary);
+    position: relative;
+    transition: font-weight .5s;
+}
+
+
+.pri::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  height: 3px;              /* espessura da linha */
+  width: 0px;
+  background-color: var(--text-primary); /* cor da linha */
+  transition: width 0.4s ease, left 0.4s ease;
+  border-radius: 2px;
+  bottom: 15px;     
+}
+
+.pri:hover::after {
+  width: 65%;
+  left: 20%; /* para centralizar a linha maior */
+}
+
+.pri2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  height: 3px;              /* espessura da linha */
+  width: 0px;
+  background-color: var(--text-primary); /* cor da linha */
+  transition: width 0.4s ease, left 0.4s ease;
+  border-radius: 2px;
+  bottom: 15px;     
+}
+
+.pri2:hover::after {
+  width: 80%;
+  left: 10%; /* para centralizar a linha maior */
+}
+
+.pri3::after {
+   content: "";
+  position: absolute;
+  left: 50%;
+  height: 3px;              /* espessura da linha */
+  width: 0px;
+  background-color: var(--text-primary); /* cor da linha */
+  transition: width 0.4s ease, left 0.4s ease;
+  border-radius: 2px;
+  bottom: 15px;     
+  
+}
+
+.pri3:hover::after {
+  width: 70%;
+  left: 15%; /* para centralizar a linha maior */
+}
+
+#cnt{
+    position: relative;
+    left: 100px;
+    border: 1px solid var(--text-primary);
+    border-radius: 50px;
+    
+}
+
+svg {
+    animation: roda 5s linear infinite;
+    color: var(--text-secondary);
+}
+
+@keyframes roda {
+    0%   { transform: translate(50px, 20px) rotate(0deg); }
+    50%  { transform: translate(50px, 20px) rotate(180deg); }
+    100% { transform: translate(50px, 20px) rotate(360deg); }
+}
+
+a:hover{
+    font-weight: 900;
+    
+}
+
+
+.btn{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    
+}
+
+.btn::before{
+    content: '';
+    background-color: var(--text-primary);
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: var(--eixoY);
+    left: var(--eixoX);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width .6s, height .6s;
+    z-index: -1;
+}
+
+.btn:hover{
+    color: var(--bg-primary);
+}
+
+.btn:hover::before{
+    width: 300px;
+    height: 300px;
+}
+
+aside{
+    color: var(--text-primary);
+    padding: 100px;
+  
+}
+
+.ini{
+    position: relative;
+    top: 40%;
+    left: 20%;
+    background-color: var(--highlight);
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50%;
+    
+}
+
+.ini p{
+    position: relative;
+    padding: 40px;
+    font-size: 2em;
+    right: 5%;
+    
+}
+
+.ini h2{
+    position: relative;
+    padding: 40px;
+    font-size: 2.8em;
+    right: 15%;
+}
+
+.ini h1{
+    padding: 40px;
+    font-size: 3em;
+    
+}
+
+.ini::before{
+    background-color: var(--highlight);
+}
+
+/* Animação */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Classe para aplicar nos elementos */
+.slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.slide-up-hidden {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.slide-up-visible {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.sobre{
+    position: relative;
+    top: 300px;   
+    font-size: 3em;
+}
+
+.sobre h2{
+    font-size: 1.2em;
+}
+
+.out{
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 20px;
+}
+
+.sobre {
+  position: relative;
+  top: 300px;
+  font-size: 1.5em;
+  padding: 80px 100px;
+  color: var(--text-primary);
+}
+
+.sobre h2 {
+  font-size: 3em;
+  font-weight: 100;
+}
+
+.sobre{
+  font-size: 1em;
+  margin-bottom: 60px;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+.resumo{
+    font-size: 2.8em;
+    font-weight: 900;
+    margin-bottom: 60px;
+}
+
+.blocos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.bloco {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px 25px;
+  font-size: 1em;
+  line-height: 1.6;
+  transition: transform 0.3s ease;
+}
+
+.bloco:hover {
+  transform: translateY(-5px);
 }
