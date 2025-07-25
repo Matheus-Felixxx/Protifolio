@@ -1,50 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matheus Felix</title>
-    <link rel="stylesheet" href="style/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matheus Felix</title>
+  <link rel="stylesheet" href="style/style.css">
 </head>
-<body class="slide-up-hidden">
+<body class=""> 
     <header>
-     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-aperture-icon lucide-aperture"><circle cx="12" cy="12" r="10"/><path d="m14.31 8 5.74 9.94"/><path d="M9.69 8h11.48"/><path d="m7.38 12 5.74-9.94"/><path d="M9.69 16 3.95 6.06"/><path d="M14.31 16H2.83"/><path d="m16.62 12-5.74 9.94"/></svg>
-        <div class="menu">
-             
-                <a href="#" class="pri linha">Sobre</a>
-                <a href="#" class="pri2 linha">Habilidades</a>
-                <a href="#" class="pri3 linha">Projetos</a>
-            <a href="#" class="btn" id="cnt">Contato</a>
-        </div>
-        
-    </header>
-    <main>
-        <aside class="ini slide-up">
-            <h1>Matheus Felix</h1>
-            <h2 >Desenvolvedor Front-End</h2>
-            <p >Seja Muito Bem-Vindo(a)</p>
-        </aside>
-        <aside class="sobre slide-up-hidden">
-  <h2>Sobre</h2>
-  <p class="resumo">
-    Sou um desenvolvedor front-end com foco na criação de interfaces modernas, responsivas e que proporcionem uma experiência satisfatória ao usuário.
-  </p>
-  
-  <div class="blocos">
-    <div class="bloco">
-      <p>Minha trajetória na tecnologia começou aos 10 anos, quando desenvolvia pequenos jogos em plataformas como o Scratch.</p>
+    <div class="header-container">
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-aperture">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="m14.31 8 5.74 9.94"/>
+        <path d="M9.69 8h11.48"/>
+        <path d="m7.38 12 5.74-9.94"/>
+        <path d="M9.69 16 3.95 6.06"/>
+        <path d="M14.31 16H2.83"/>
+        <path d="m16.62 12-5.74 9.94"/>
+      </svg>
+      
+      <button class="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </button>
+      
+      <nav class="menu">
+        <a href="#sobre" class="pri linha">Sobre</a>
+        <a href="#habilidades" class="pri2 linha">Habilidades</a>
+        <a href="#projetos" class="pri3 linha">Projetos</a>
+        <a href="#contato" class="btn" id="cnt">Contato</a>
+      </nav>
     </div>
-    <div class="bloco">
-      <p>Posteriormente, por indicação de um colega, iniciei meus estudos em HTML e CSS — momento em que descobri minha paixão pela área.</p>
-    </div>
-    <div class="bloco">
-      <p>Atualmente, busco constantemente aprimorar minhas habilidades técnicas e criativas, com o objetivo de me tornar, futuramente, um desenvolvedor full stack completo.</p>
-    </div>
-  </div>
-</aside>
+  </header>
+  <main>
+    <aside class="ini slide-up"> <h1>Matheus Felix</h1>
+      <h2>Desenvolvedor Front-End</h2>
+      <p>Seja Muito Bem-Vindo(a)</p>
+    </aside>
 
-    </main>
-    <script src="script/hover.js"></script>
-    <script src="script/slide.js"></script>
+    <aside class="sobre slide-up-hidden"> <h2>Sobre</h2>
+      <p class="resumo">
+        Sou um desenvolvedor front-end com foco na criação de interfaces modernas, responsivas e que proporcionem uma experiência satisfatória ao usuário.
+      </p>
+
+      <div class="blocos">
+        <div class="bloco">
+          <p>Minha trajetória na tecnologia começou aos 10 anos, quando desenvolvia pequenos jogos em plataformas como o Scratch.</p>
+        </div>
+        <div class="bloco">
+          <p>Posteriormente, por indicação de um colega, iniciei meus estudos em HTML e CSS — momento em que descobri minha paixão pela área.</p>
+        </div>
+        <div class="bloco">
+          <p>Atualmente, busco constantemente aprimorar minhas habilidades técnicas e criativas, com o objetivo de me tornar, futuramente, um desenvolvedor full stack completo.</p>
+        </div>
+      </div>
+    </aside>
+
+    <aside class="skill slide-up-hidden"> <h2>Habilidades</h2>
+      <div class="lang skills-cards">
+        <p>Linguagens em que tenho afinidade</p>
+        <img src="style/imagens/html.png" alt="">
+        <img src="style/imagens/css.png" alt="">
+        <img src="style/imagens/js.png" alt="">
+      </div>
+
+      <div class="fer skills-cards">
+        <p>Ferramentas e ambientes que utilizo</p>
+        <img src="style/imagens/linux.png" alt="">
+        <img src="style/imagens/git.jpg" alt="">
+        <img src="style/imagens/vscode.png" alt="">
+      </div>
+    </aside>
+  </main>
+
+  <script src="script/hover.js"></script>
+  <script src="script/slide.js"></script> <script src="script/menu.js"></script>
 </body>
 </html>
