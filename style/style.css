@@ -140,7 +140,7 @@ header .menu a:hover{
 }
 
 /* SVG animado */
-svg {
+.lucide{
   animation: roda 5s linear infinite;
   color: var(--text-secondary);
 }
@@ -518,9 +518,15 @@ section {
     width: 80%;
   }
 
-
-
+ .lang-toggle {
+    margin: 100px auto 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   
+  }
 }
+
 
 
 @media (max-width: 480px) {
@@ -551,7 +557,6 @@ section {
   .skill h2{
     font-size: 2em;
     font-weight: 100;
-
   }
 
   .blocos {
@@ -559,74 +564,58 @@ section {
   }
 
   #contato {
-  padding: 100px 20px;
-  text-align: center;
-  color: var(--text-primary);
-}
+    padding: 100px 20px;
+    text-align: center;
+    color: var(--text-primary);
+  }
 
-#contato h2{
-  font-size: 2.6em;
-  font-weight: 100;
-}
+  #contato h2{
+    font-size: 2.6em;
+    font-weight: 100;
+  }
 
-#contato p{
-  font-size: 1.6em;
-}
+  #contato p{
+    font-size: 1.6em;
+  }
 
-#contato p a {
-  color: var(--text-secondary);
-  text-decoration: none;
-    
-}
+  #contato p a {
+    color: var(--text-secondary);
+    text-decoration: none;
+  }
 
-.emc{
-  font-size: 3em;
-  font-weight: 900;
-}
+  .emc{
+    font-size: 3em;
+    font-weight: 900;
+  }
 
-#contato p a:hover {
-  color: var(--accent-hover);
-  text-decoration: underline;
-}
+  .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+  }
 
-.icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-  gap: 30px;
-  margin-top: 30px;
+  .icons img {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    object-fit: contain;
+  }
 
-}
-
-.icons img {
-  width: 200px;
-  height: 200px;
-  padding: 10px;
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 20px;
-  transition: transform 0.3s ease;
-  object-fit: contain;
-}
-
-.icons img:hover {
-  transform: scale(1.05);
-}
-
-.flag-container {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  cursor: pointer;
-  border: 2px solid var(--text-primary);
-  transition: transform 0.3s ease;
-} 
-
+  .lang-toggle {
+    margin: 100px auto 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   
+  }
 
 }
 
@@ -780,3 +769,186 @@ main aside h2 {
   animation: pulsar 2s ease-in-out infinite;
 }
 
+/* Bandeiras */
+.flag-container {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.flag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--text-primary);
+    transition: opacity 0.3s ease;
+}
+
+.flag:not(.active) {
+    opacity: 0;
+}
+
+.flag.active {
+    opacity: 1;
+}
+
+
+/* Seção de Projetos */
+#projetos {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#projetos h2 {
+  font-size: 2.6em;
+  font-weight: 100;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+#projetos h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.project-card {
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Container da imagem */
+.project-image-container {
+    position: relative;
+    height: 200px; /* Altura fixa do container */
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+/* Imagem do projeto */
+.project-image {
+    width: 100%;
+    height: auto;
+    min-height: 400px; /* Aumente a altura mínima para permitir a rolagem */
+    object-fit: cover;
+    transition: transform 8s linear; /* Aumentei o tempo para um efeito mais suave */
+    transform: translateY(0); /* Posição inicial da imagem */
+}
+
+/* Efeito de rolagem na imagem quando o card é hover */
+.project-card:hover .project-image {
+    transform: translateY(calc(-100% + 200px)); /* Move a imagem para cima */
+}
+
+/* Efeito de overlay com ícones */
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-icon {
+  width: 40px;
+  height: 40px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.project-icon:hover {
+  transform: scale(1.2);
+  color: var(--highlight);
+}
+
+.project-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.project-info p {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+
+.tech-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.tech-tags span {
+    background-color: var(--highlight);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8em;
+}
+
+/* Card "Em Breve" - Apenas para manter o alinhamento da imagem */
+.project-card.coming-soon {
+  opacity: 0.8;
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: 350px;
+}
+
+.project-card.coming-soon .project-image {
+  /* Restaura a imagem para o seu estado normal */
+  min-height: 200px;
+  transform: none;
+}
+
+.project-card.coming-soon:hover .project-image {
+  transform: none;
+}

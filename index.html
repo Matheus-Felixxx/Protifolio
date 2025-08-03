@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matheus Felix</title>
+  <title class="lang" key="title">Matheus Felix</title>
   <link rel="stylesheet" href="style/style.css">
 </head>
 <body class=""> 
@@ -28,10 +28,10 @@
       </div>
       
       <nav class="menu">
-        <a href="#sobre" class="pri linha">Sobre</a>
-        <a href="#habilidades" class="pri2 linha">Habilidades</a>
-        <a href="#projetos" class="pri3 linha">Projetos</a>
-        <a href="#contato" class="btn" id="cnt">Contato</a>
+        <a href="#sobre" class="pri linha lang" key="about">Sobre</a>
+        <a href="#habilidades" class="pri2 linha lang" key="skills">Habilidades</a>
+        <a href="#projetos" class="pri3 linha lang" key="projects">Projetos</a>
+        <a href="#contato" class="btn lang" id="cnt" key="contact">Contato</a>
         <div class="lang-toggle">
           <div class="flag-container">
             <img src="style/imagens/eua.jpg" alt="USA Flag" class="flag active" id="usa-flag">
@@ -44,63 +44,162 @@
   <main>
     <aside class="ini slide-up"> 
       <h1>Matheus Felix</h1>
-      <h2>Desenvolvedor Front-End</h2>
-      <p>Seja Muito Bem-Vindo(a)</p>
+      <h2 class="lang" key="occupation">Desenvolvedor Front-End</h2>
+      <p class="lang" key="welcome">Seja Muito Bem-Vindo(a)</p>
     </aside>
 
-    <aside class="sobre slide-up-hidden"> 
-      <h2>Sobre</h2>
-      <p class="resumo">
+    <aside class="sobre slide-up-hidden" id="sobre"> 
+      <h2 class="lang" key="about">Sobre</h2>
+      <p class="resumo lang" key="summary">
         Sou um desenvolvedor front-end com foco na criação de interfaces modernas, responsivas e que proporcionem uma experiência satisfatória ao usuário.
       </p>
 
       <div class="blocos">
         <div class="bloco">
-          <p>Minha trajetória na tecnologia começou aos 10 anos, quando desenvolvia pequenos jogos em plataformas como o Scratch.</p>
+          <p class="lang" key="journey1">Minha trajetória na tecnologia começou aos 10 anos, quando desenvolvia pequenos jogos em plataformas como o Scratch.</p>
         </div>
         <div class="bloco">
-          <p>Posteriormente, por indicação de um colega, iniciei meus estudos em HTML e CSS — momento em que descobri minha paixão pela área.</p>
+          <p class="lang" key="journey2">Posteriormente, por indicação de um colega, iniciei meus estudos em HTML e CSS — momento em que descobri minha paixão pela área.</p>
         </div>
         <div class="bloco">
-          <p>Atualmente, busco constantemente aprimorar minhas habilidades técnicas e criativas, com o objetivo de me tornar, futuramente, um desenvolvedor full stack completo.</p>
+          <p class="lang" key="journey3">Atualmente, busco constantemente aprimorar minhas habilidades técnicas e criativas, com o objetivo de me tornar, futuramente, um desenvolvedor full stack completo.</p>
         </div>
       </div>
     </aside>
 
-    <aside class="skill slide-up-hidden"> 
-      <h2>Habilidades</h2>
+    <aside class="skill slide-up-hidden" id="habilidades"> 
+      <h2 class="lang" key="skills">Habilidades</h2>
       <div class="lang skills-cards">
-        <p>Linguagens em que tenho afinidade</p>
-        <img src="style/imagens/html.png" alt="">
-        <img src="style/imagens/css.png" alt="">
-        <img src="style/imagens/js.png" alt="">
+        <p class="lang" key="languages">Linguagens em que tenho afinidade</p>
+        <img src="style/imagens/html.png" alt="HTML">
+        <img src="style/imagens/css.png" alt="CSS">
+        <img src="style/imagens/js.png" alt="JavaScript">
       </div>
 
       <div class="fer skills-cards">
-        <p>Ferramentas e ambientes que utilizo</p>
-        <img src="style/imagens/linux.png" alt="">
-        <img src="style/imagens/git.jpg" alt="">
-        <img src="style/imagens/vscode.png" alt="">
+        <p class="lang" key="tools">Ferramentas e ambientes que utilizo</p>
+        <img src="style/imagens/linux.png" alt="Linux">
+        <img src="style/imagens/git.jpg" alt="Git">
+        <img src="style/imagens/vscode.png" alt="VS Code">
       </div>
     </aside>
 
-    <section id="contato">
-      <div class="icons">
-        <h2>Contato</h2>
-        <h3 class="emc">Entre em contato comigo</h3>
-        <p>Email: <a href="mailto:matheusfelix862@gmail.      com">matheusfelix862@gmail.com</a></p>
-        <img src="style/imagens/email.png" alt="Gmail">
-        <p>Instagram: <a href="https://instagram.com/matheuus_felix" target="_blank">@matheuus_felix</a></p>
-        <img src="style/imagens/insta.svg" alt="Instagram">
-        <p>WhatsApp: <a href="https://wa.me/5511942299497" target="_blank"> +55 11 94229-9497</a></p>
-        <img src="style/imagens/whatsapp.webp" alt="WhatsApp">
+    <aside id="projetos" class="slide-up-hidden">
+  <h2 class="lang" key="projects">Projetos</h2>
+  <h3 class="lang" key="view-projects">Veja Meus Projetos</h3>
+  
+  <div class="projects-container">
+    <!-- Projeto ArchTec -->
+    <div class="project-card">
+      <div class="project-image-container">
+        <img src="style/imagens/archtec.png" alt="Projeto ArchTec" class="project-image">
+        <div class="project-overlay">
+          <a href="https://github.com/seu-usuario/archtec" target="_blank" class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          </a>
+          <a href="https://seusite.com/archtec" target="_blank" class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" lucide-eye"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="project-info">
+        <h4>ArchTec</h4>
+        <p class="lang" key="project1-desc">Website desenvolvido para o grêmio escolar</p>
+        <div class="tech-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projeto Tuca's Buffet -->
+    <div class="project-card">
+      <div class="project-image-container">
+        <img src="style/imagens/tucas.png" alt="Tuca's Buffet" class="project-image">
+        <div class="project-overlay">
+          <a href="https://github.com/seu-usuario/tucas-buffet" target="_blank" class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          </a>
+          <a href="https://seusite.com/tucas-buffet" target="_blank" class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" lucide-eye"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="project-info">
+        <h4>Tuca's Buffet</h4>
+        <p class="lang" key="project2-desc">Website para buffet com cardápio digital</p>
+        <div class="tech-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projeto Cronostudo -->
+    <div class="project-card">
+      <div class="project-image-container">
+        <img src="style/imagens/cronostudo.png" alt="Cronostudo" class="project-image">
+        <div class="project-overlay">
+          <a href="https://github.com/seu-usuario/cronostudo" target="_blank" class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          </a>
+          <a href="https://seusite.com/cronostudo" target="_blank" class="project-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" lucide-eye"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="project-info">
+        <h4>Cronostudo</h4>
+        <p class="lang" key="project3-desc">Aplicativo de gestão de tempo e produtividade</p>
+        <div class="tech-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+      </div>
+    </div>
   </div>
-</section>
+  
+      <!-- Em Breve -->
+      <div class="project-card breve">
+      <div class="project-image-container">
+        <img src="style/imagens/programa.jpg" alt="Cronostudo" class="project-image">
+        <div class="project-overlay">
+        </div>
+      </div>
+      <div class="project-info">
+        <h4>???</h4>
+        <p class="lang" key="project4-desc">Ainda estou fazendo mais projetos, e quem sabe o seu projeto pode esatr aqui.</p>
+        <div class="tech-tags">
+          <span>???</span>
+          <span>???</span>
+          <span>???</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+    <aside id="contato">
+      <div class="icons">
+        <h2 class="lang" key="contact">Contato</h2>
+        <h3 class="emc lang" key="contact-me">Entre em contato comigo</h3>
+        <p class="lang" key="email">Email: <a href="mailto:matheusfelix862@gmail.com">matheusfelix862@gmail.com</a></p>
+        <img src="style/imagens/email.png" alt="Gmail">
+        <p class="lang" key="instagram">Instagram: <a href="https://instagram.com/matheuus_felix" target="_blank">@matheuus_felix</a></p>
+        <img src="style/imagens/insta.svg" alt="Instagram">
+        <p class="lang" key="whatsapp">WhatsApp: <a href="https://wa.me/5511942299497" target="_blank">+55 11 94229-9497</a></p>
+        <img src="style/imagens/whatsapp.webp" alt="WhatsApp">
+      </div>
+    </aside>
   </main>
 
   <script src="script/hover.js"></script>
   <script src="script/slide.js"></script> 
   <script src="script/menu.js"></script>
   <script src="script/flags.js"></script>
+  <script src="script/rolagem.js"></script>
 </body>
 </html>
