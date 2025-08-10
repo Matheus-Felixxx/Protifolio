@@ -588,35 +588,6 @@ section {
     font-weight: 900;
   }
 
-  .icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 30px;
-    margin-top: 30px;
-  }
-
-  .icons img {
-    width: 200px;
-    height: 200px;
-    padding: 10px;
-    background-color: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    transition: transform 0.3s ease;
-    object-fit: contain;
-  }
-
-  .lang-toggle {
-    margin: 100px auto 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-   
-  }
-
 }
 
 /* === Bandeira com troca === */
@@ -737,14 +708,7 @@ section {
   transform: scale(1.05);
 }
 
-/* Remove this, as the p tags are now outside the flex container */
-/* .skills-cards p {
-  flex-basis: 100%;
-  font-size: 1.6em;
-  font-weight: bold;
-  color: var(--text-primary);
-  margin-bottom: 20px;
-} */
+
 
 /* === MAIN CONTENT === */
 
